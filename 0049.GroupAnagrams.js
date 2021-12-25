@@ -10,7 +10,7 @@ var groupAnagrams = function (strs) {
       const ascii = str.charCodeAt(i) - 97;
       characters[ascii]++;
     }
-    const key = characters.join("");
+    const key = characters.join(" "); // 感谢L30Yu提交bug并提出解决方案： https://github.com/jslaobi/jslaobi-leetcode-js/issues/1
     if (map.has(key)) {
       map.set(key, [...map.get(key), str]);
     } else {
